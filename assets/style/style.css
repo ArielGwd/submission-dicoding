@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&family=Quicksand:wght@400;700&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Ubuntu:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #2C3639;
+}
+/* ---------- Header --------- */
+
+#home {
+    display: inline;
+}
+
+.navbar {
+    background-color: #2C3639;
+    display: flex;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 0 20px 0 deeppink;
+}
+
+.logo {
+    flex-grow: 1;
+    margin: 10px 20px 0;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+.logo a {
+    color: deeppink;
+    text-decoration: none;
+}.straw, .hat:hover {
+    color: pink;
+}.straw:hover {
+    color: deeppink;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}nav ul li {
+    margin: 20px 25px;
+}nav a {
+    font-family: sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: deeppink;
+    display: block;
+    transition: all 0.5s;
+}nav a:hover::after {
+    width: 100%;
+}.warna {
+    background-color: deeppink;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px 0;
+}
+
+/*Hamburger Menu*/
+.nav-responsive {
+	margin: 20px 20px 20px 0;
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+}
+
+.nav-responsive input {
+	position: absolute;
+	width: 50px;
+	height: 35px;
+	left: -10px;
+	top: -5px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.nav-responsive span {
+	display: block;
+	width: 28px;
+	height: 3px;
+	background-color: deeppink;
+	border-radius: 3px;
+	transition: all 0.4s;
+	z-index: 3;
+	cursor: pointer;
+}
+/* Hamburger Menu Animation */
+.nav-responsive span:nth-child(2) {
+	transform-origin: 0 0;
+}
+
+.nav-responsive span:nth-child(4) {
+	transform-origin: 0 100%;
+}.nav-responsive input:checked ~ span:nth-child(2) {
+	background-color: hotpink;
+	transform: rotate(45deg) translate(-1px, -1px);
+}.nav-responsive input:checked ~ span:nth-child(3) {
+	opacity: 0;
+	transform: scale(0);
+}.nav-responsive input:checked ~ span:nth-child(4) {
+	background-color: hotpink;
+	transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* background */
+.background {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(34, 4, 29, 0.7),
+        rgba(34, 4, 29, 0.7)),
+        url(../image/crew.jpg);  
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}.welcome {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	width: 90%;
+	transform: translate(-50%, -30%);
+}.welcome h1 {
+    font-size: 2em;
+}
+.button {
+    background-color: transparent;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid deeppink;
+    border-radius: 10px;
+    transition: all 0.5s;
+}.button:hover {
+    background-color: deeppink;
+}
+
+/* -------Main------ */
+/* about */
+.title {
+    color: deeppink;
+    text-align: center;
+    margin: 50px 20px 20px 10px;
+}
+
+.konten {
+    margin: 20px;
+    display: flex;
+}
+.isi {
+    display: flex;
+    width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.flex {
+    flex-grow: 1;
+    margin: 15px;
+}
+
+.image img {
+    width: 400px;
+    box-shadow: 0 0 8px 0 pink;
+    border: 10px outset deeppink;
+}
+
+.penjelasan {
+    background-color: #3f4e4f;
+    border-radius: 10px;
+    transition: all 0.8s;
+}.penjelasan:hover {
+    box-shadow: 0 0 18px 0 pink;
+}.penjelasan h2 {
+    color: pink;
+    padding: 20px;
+}.penjelasan p {
+    color: white;
+    padding: 5px 20px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --------Crew Crew Crew------- */
+.konten {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro {
+    margin: 30px;
+    flex-basis: 50%;
+    background-color: #3f4e4f;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.25s;
+}.intro:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 20px 0 hotpink;
+}
+
+.lingkaran {
+    width: 150px;
+    height: 150px;
+    background-color: deeppink;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+}.lingkaran img {
+    width: 150px;
+}
+.data h2 {
+    margin-top: 10px;
+    color: hotpink;
+}.data p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* -------Quote Quote Quote------- */
+#quote {
+    background-color: #b12547;
+    width: 100%;
+    box-shadow: 0 0 20px 0 pink;
+    padding-top: 10px;
+    
+}
+
+#quote h2 {
+    color: white;
+}#quote p {
+    color: white;
+    padding-top: 20px;
+}#quote .intro {
+    background-color: deeppink;
+    transition: 0.4s ease;
+}#quote .intro:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 0 hotpink;
+}#quote .lingkaran {
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}#quote .lingkaran img {
+    width: 50px;
+}
+
+/* contact contact contact contact contact contact contact  */
+#contact {
+    background-color: black;
+    padding: 20px;
+}#contact .title {
+    text-align: center;
+    color: deeppink;
+    margin: 20px;
+}#contact .kontak {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form h2 {
+    color: deeppink;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: hotpink;
+}
+/* dirikuu :v */
+.saya h2 {
+    color: deeppink;
+    margin-bottom: 20px;
+    text-align: center;
+}.saya .lingkaran {
+    margin-bottom: 50px;
+}.saya p {
+    color:hotpink;
+    font-weight: 300;
+    padding-top: 15px;
+}.saya p:after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background-color: deeppink;
+	display: block;
+	transition: all 0.5s;
+}.saya p:hover:after {
+	width: 60%;
+}.saya a { text-decoration: none;}
+
+.like {
+	color: lightpink;
+	font-weight: 600;
+	text-align: right;
+	cursor: pointer;
+	user-select: none;
+	margin-top: 20px;
+	transition: all 0.5s;
+}#emoji {
+	padding: 8px;
+}
+
+
+footer {
+	font-size: 1.5em;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	background-color: #3F4E4F;
+	box-shadow: 0 10px 20px 0 pink;
+}
+
+/* -------------------------------------------------- */
+/* ------------------ RESPONSIVE -------------------- */
+/* -------------------------------------------------- */
+
+@media screen and (max-width: 1200px){
+    /* about */
+    .isi {
+        padding: 0;
+    }
+
+    /* quote */
+    #quote .konten {
+		flex-wrap: wrap;
+	}#quote .intro {
+		flex: 30%;
+	}
+
+    /* contact */
+    #contact .kontak {
+        display: flex;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1000px){
+    /* crew */
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }.intro {
+        flex: 20%;
+    }
+    
+    /* kontak */
+    
+}
+@media screen and (max-width: 980px){
+    /* about */
+    .isi {
+        width: 95%;
+		padding: 0;
+    }
+}
+@media screen and (max-width: 780px){
+    /* header navigation */
+    nav ul {
+		display: flex;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		height: 100vh;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		background: #2C3639;
+		box-shadow:  0 0 20px 3px deeppink;
+		z-index: 1;
+		transform: translateX(100%);
+		transition: all 1s;
+		opacity: 0;
+	}
+
+	nav ul.slide {
+		opacity: 1;
+		transform: translate(0);
+	}
+    .warna {
+		padding: 10px;
+	}
+	.nav-responsive {
+	display: flex;
+	}
+
+    /* about */
+    .isi {
+		padding: 0;
+		display: block;
+	}
+
+	.penjelasan {
+		width: 60%;
+		display: inline-block;
+		padding-bottom: 20px;
+	}
+
+    /* quote */
+    #quote .intro {
+		flex: 40%;
+	}
+
+    /* kontak */
+    #contact .kontak {
+        display: block;
+        width: 65%;
+      
+    }
+}
+@media screen and (max-width: 550px){
+    /* about */
+    .penjelasan {
+		width: 80%;
+		padding-bottom: 20px;
+	}
+    
+     /* kontak */
+     #contact .kontak {
+        display: block;
+        width: 85%; 
+    }
+}
+@media screen and (max-width: 430px){
+    /* about */
+    .image img {
+        width: 350px;
+    }
+    .penjelasan {
+		width: 90%;
+		padding-bottom: 20px;
+	}
+
+    /* quote */
+    #quote .intro {
+		flex: 50%;
+	}
+
+    /* kontak */
+    #contact .kontak {
+        display: block;
+        width: 90%; 
+    }
+}
+@media screen and (max-width: 380px){
+    /* about */
+    .image img {
+        width: 280px;
+    }
+    .penjelasan {
+		width: 80%;
+		padding-bottom: 20px;
+	}
+
+    /* quote */
+    #quote .lingkaran {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+	}
+
+    /* kontak */
+    #contact .kontak {
+        display: block;
+        width: 95%; 
+    }.saya p {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 330px){
+    /* about */
+    .image img {
+        width: 250px;
+    }
+    .penjelasan {
+		width: 80%;
+		padding-bottom: 20px;
+	}
+    /* contact */
+    .saya p {
+        font-size: 10px;
+    }
+}
+
+
+.submit {
+    width: 100%;
+
+}
+
+
+.belum-kelar {
+    color: white;
+    animation: animek 5s infinite ease; 
+    animation-duration: 30s;
+
+}
+
+.belum-kelar h2 {
+    color: white;
+    
+}
+
+
+
+@keyframes animek {
+    to {
+        transform: translateX(102%);
+    }
+}
